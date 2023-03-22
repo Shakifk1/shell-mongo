@@ -431,12 +431,12 @@ Human_Resource> db.employee.insertOne({"firstName":"dj","lastName":"brovo","sala
                 <p class="task">6.Query the collection ""employee"" and update the salary of the employee whose salary
                     is greater than 70000 to 65000.</p>
 <pre class="result">
-    Human_Resource> db.employee.updateMany({"salary":"70000"},{"$set":{"salary":"65000"}})
+    Human_Resource> db.employee.updateMany({"salary":{"$gt":"70000"}},{"$set":{"salary":"65000"}})
     {
       acknowledged: true,
       insertedId: null,
-      matchedCount: 0,
-      modifiedCount: 0,
+      matchedCount: 1,
+      modifiedCount: 1,
       upsertedCount: 0
     }
         </pre>
